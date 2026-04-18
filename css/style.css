@@ -1,1 +1,120 @@
 
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f7f3ef;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: white;
+  position: sticky;
+  top: 0;
+}
+
+header h1 {
+  color: #b89b7a;
+}
+
+nav a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #555;
+}
+
+/* HERO */
+.hero {
+  height: 80vh;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+              url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3rem;
+}
+
+/* BOTÃO */
+.btn {
+  background: #b89b7a;
+  padding: 12px 25px;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+}
+
+/* SERVIÇOS */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 250px;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+}
+
+/* GALERIA */
+.galeria {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.galeria img {
+  width: 200px;
+  border-radius: 10px;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+  gap: 10px;
+}
+
+input, select, button {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #b89b7a;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: white;
+}
