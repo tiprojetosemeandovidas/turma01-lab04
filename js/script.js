@@ -1,122 +1,37 @@
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ponto do Charme</title>
 
-  <!-- Fonte elegante -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+// Efeito de Scroll no Header
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    header.classList.toggle('sticky', window.scrollY > 50);
+});
 
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+// Revelação Suave de Elementos (Intersection Observer)
+const observerOptions = {
+    threshold: 0.25
+};
 
-<header class="header">
-  <div class="logo">Ponto do Charme</div>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+        }
+    });
+}, observerOptions);
 
-  <nav>
-    <a href="#servicos">Serviços</a>
-    <a href="#galeria">Galeria</a>
-    <a href="#agendamento">Agendar</a>
-  </nav>
-</header>
+document.querySelectorAll('.service-card, .section-title').forEach(el => {
+    el.style.opacity = "0";
+    el.style.transform = "translateY(50px)";
+    el.style.transition = "all 0.8s ease-out";
+    observer.observe(el);
+});
 
-<!-- HERO -->
-<section class="hero">
-  <div class="overlay"></div>
-
-  <div class="hero-content">
-    <h1>Beleza que transforma</h1>
-    <p>Cabelos • Unhas • Maquiagem</p>
-  </div>
-</section>
-
-<!-- PACOTES / SERVIÇOS -->
-<section class="pacotes" id="servicos">
-  <h2>Confira nossos serviços</h2>
-
-  <div class="grid">
-    <div class="box">
-      <h3>Cabelos</h3>
-      <p>Cortes, escova, hidratação</p>
-    </div>
-
-    <div class="box">
-      <h3>Unhas</h3>
-      <p>Manicure, pedicure, nail art</p>
-    </div>
-
-    <div class="box">
-      <h3>Maquiagem</h3>
-      <p>Eventos e dia a dia</p>
-    </div>
-
-    <div class="box">
-      <h3>Pacotes</h3>
-      <p>Combo beleza completo</p>
-    </div>
-  </div>
-</section>
-
-<!-- BLOCO DE DESTAQUE (igual roxo do Socila, mas bege) -->
-<section class="destaque">
-  <div class="cards">
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f">
-      <div class="card-overlay">
-        <p>+100 clientes</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9">
-      <div class="card-overlay">
-        <p>Profissionais qualificados</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796">
-      <div class="card-overlay">
-        <p>Atendimento premium</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- AGENDAMENTO -->
-<section class="agendamento" id="agendamento">
-  <h2>Agende seu horário</h2>
-
-  <form>
-    <input type="text" placeholder="Nome" required>
-    <input type="date" required>
-
-    <select>
-      <option>Serviço</option>
-      <option>Cabelo</option>
-      <option>Unhas</option>
-      <option>Maquiagem</option>
-    </select>
-
-    <select>
-      <option>Horário</option>
-      <option>09:00</option>
-      <option>10:00</option>
-      <option>11:00</option>
-    </select>
-
-    <button>Agendar</button>
-  </form>
-</section>
-
-<footer>
-  <p>Ponto do Charme © 2026</p>
-</footer>
-
-</body>
-</html>
+// Simulação de Micro-interação (Haptic feedback visual)
+const buttons = document.querySelectorAll('.btn-primary');
+buttons.forEach(btn => {
+    btn.addEventListener('mouseenter', () => {
+        console.log('Interação Premium Detectada');
+        // Aqui poderíamos adicionar um som de clique sutil ou feedback haptico
+    });
+});
