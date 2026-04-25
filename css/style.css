@@ -1,99 +1,45 @@
-/* --- Mantendo suas cores e fontes --- */
 :root {
-    --gold: #c5a059;
-    --beige-light: #f9f7f2;
-    --white: #ffffff;
-    --dark: #3a352f;
+    --bege: #f5f1ea;
+    --dourado: #c5a059;
+    --prata: #e2e2e2;
+    --branco: #ffffff;
+    --texto: #333333;
 }
 
-/* --- Layout de Serviços com Imagens --- */
-.grid-services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Montserrat', sans-serif; color: var(--texto); line-height: 1.6; background-color: var(--branco); }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-.service-card {
-    background: var(--white);
-    border: 1px solid rgba(197, 160, 89, 0.2);
-    overflow: hidden;
-    transition: transform 0.4s ease;
-}
+/* Header */
+header { height: 80px; display: flex; align-items: center; border-bottom: 1px solid var(--bege); position: sticky; top: 0; background: #fff; z-index: 1000; }
+nav { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+.logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: bold; letter-spacing: 2px; }
+.nav-menu { display: flex; list-style: none; gap: 25px; }
+.nav-menu a { text-decoration: none; color: var(--texto); font-size: 0.9rem; font-weight: 600; text-transform: uppercase; }
+.btn-cta { background: var(--dourado); color: #fff; padding: 10px 20px; text-decoration: none; font-size: 0.8rem; font-weight: bold; }
 
-.service-card:hover {
-    transform: translateY(-10px);
-}
+/* Hero */
+.hero-slider { height: 70vh; background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=80') center/cover; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; }
+.hero-content h1 { font-family: 'Cormorant Garamond', serif; font-size: 4rem; margin-bottom: 10px; }
 
-.img-wrapper {
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
-}
+/* Cards de Serviço */
+.section-padding { padding: 80px 0; }
+.section-header { text-align: center; margin-bottom: 50px; }
+.divider { width: 60px; height: 3px; background: var(--dourado); margin: 15px auto; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.card { border: 1px solid var(--bege); transition: 0.3s; }
+.card-img img { width: 100%; height: 300px; object-fit: cover; }
+.card-body { padding: 20px; text-align: center; }
+.card-body h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin-bottom: 10px; color: var(--dourado); }
 
-.img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: sepia(20%); /* Dá um tom bege luxuoso às fotos */
-    transition: transform 0.6s ease;
-}
+/* Agendamento */
+.booking-area { background: var(--bege); padding: 80px 0; }
+.booking-box { max-width: 600px; margin: 0 auto; background: #fff; padding: 40px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+.booking-form { display: flex; flex-direction: column; gap: 15px; margin-top: 25px; }
+input, select { width: 100%; padding: 15px; border: 1px solid var(--prata); margin-bottom: 15px; }
+.btn-submit { width: 100%; padding: 15px; background: var(--texto); color: #fff; border: none; font-weight: bold; cursor: pointer; transition: 0.3s; }
+.btn-submit:hover { background: var(--dourado); }
 
-.service-card:hover img {
-    transform: scale(1.1);
-}
-
-.service-info {
-    padding: 30px;
-    text-align: center;
-}
-
-/* --- Seção de Agendamento --- */
-.booking-section {
-    padding: 100px 0;
-    background-color: var(--beige-light);
-}
-
-.booking-container {
-    max-width: 600px;
-    margin: 0 auto;
-    background: var(--white);
-    padding: 50px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-}
-
-.booking-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 30px;
-}
-
-.booking-form input, .booking-form select {
-    padding: 15px;
-    border: 1px solid #e8e2d6;
-    font-family: 'Montserrat', sans-serif;
-    outline: none;
-}
-
-.booking-form input:focus {
-    border-color: var(--gold);
-}
-
-/* --- WhatsApp Float --- */
-.whatsapp-float {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: #25d366;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    z-index: 1000;
-}
-
-.whatsapp-float img { width: 35px; }
+/* WhatsApp */
+.whatsapp-btn { position: fixed; bottom: 30px; right: 30px; width: 60px; z-index: 1000; transition: 0.3s; }
+.whatsapp-btn:hover { transform: scale(1.1); }
