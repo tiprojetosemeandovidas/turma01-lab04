@@ -1,33 +1,91 @@
-:/* --- Estilização das Imagens nos Cards --- */
-.img-wrapper {
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
-    margin-bottom: 25px;
-    border: 1px solid var(--silver-light);
-    transition: var(--transition);
+:root {
+    --white: #ffffff;
+    --soft-cream: #fdfbf7;
+    --nude-bege: #f4eee1;
+    --gold-dust: #d4af37;
+    --silver-silk: #d1d1d1;
+    --text-soft: #55524e;
 }
 
-.img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
-    filter: sepia(20%) contrast(1.1); /* Filtro leve para harmonizar com o bege/dourado */
-    transition: transform 0.8s ease;
+body {
+    background-color: var(--white);
+    color: var(--text-soft);
 }
 
-.service-card:hover .img-wrapper img {
-    transform: scale(1.1); /* Efeito de zoom elegante no hover */
+/* --- Estilo do Formulário de Agendamento --- */
+.booking-section {
+    padding: 100px 0;
+    background: var(--soft-cream);
 }
 
-.service-card:hover .img-wrapper {
-    border-color: var(--gold-leaf);
+.booking-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 50px;
+    border: 1px solid var(--nude-bege);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.03);
+    text-align: center;
 }
 
-/* Ajuste no Grid para comportar 4 itens se necessário */
-.grid-services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+.booking-form {
+    display: flex;
+    flex-direction: column;
     gap: 20px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
+
+.input-group {
+    display: flex;
+    gap: 15px;
+}
+
+input, select {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid var(--nude-bege);
+    background: var(--soft-cream);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-soft);
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: var(--gold-dust);
+}
+
+/* --- Botão WhatsApp Flutuante --- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover { transform: scale(1.1); }
+
+.whatsapp-float .tooltip {
+    position: absolute;
+    right: 75px;
+    background: var(--white);
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: 0.3s;
+    pointer-events: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.whatsapp-float:hover .tooltip { opacity: 1; }
