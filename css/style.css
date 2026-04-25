@@ -1,88 +1,39 @@
-/* --- Estilos Adicionais de UX --- */
-.img-container {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    margin-bottom: 20px;
+:root {
+    --white: #ffffff;
+    --bege: #f4eee1;
+    --gold: #d4af37;
+    --silver: #c0c0c0;
+    --text: #333;
 }
 
-.img-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-    filter: sepia(15%); /* Mantém o tom bege nas fotos */
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Montserrat', sans-serif; background: var(--white); color: var(--text); }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-.service-card:hover .img-container img {
-    transform: scale(1.1);
-}
+/* Header & Nav */
+header { padding: 20px 0; background: var(--white); border-bottom: 1px solid var(--bege); }
+nav { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--gold); }
+.nav-links { display: flex; list-style: none; gap: 20px; }
 
-/* --- Seção de Agendamento --- */
-.booking-section {
-    padding: 80px 0;
-    background-color: #fdfbf7; /* Bege claríssimo */
-}
+/* Hero */
+.hero { height: 60vh; display: flex; align-items: center; background: var(--bege); text-align: center; }
+.hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; width: 100%; }
+.hero span { color: var(--gold); font-style: italic; }
 
-.booking-card {
-    background: #fff;
-    padding: 50px;
-    border: 1px solid #e8e2d6;
-    max-width: 900px;
-    margin: 0 auto;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
-}
+/* Services */
+.grid-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding: 50px 0; }
+.service-card { text-align: center; border: 1px solid var(--bege); padding-bottom: 20px; transition: 0.3s; }
+.service-card:hover { border-color: var(--gold); transform: translateY(-5px); }
+.service-card img { width: 100%; height: 250px; object-fit: cover; margin-bottom: 15px; }
 
-.booking-text { text-align: center; margin-bottom: 30px; }
-.booking-text h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; }
+/* Booking */
+.booking-section { padding: 60px 0; background: #fafafa; }
+.booking-card { max-width: 600px; margin: 0 auto; background: #fff; padding: 40px; border: 1px solid var(--gold); }
+.booking-form { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
+input, select { padding: 12px; border: 1px solid var(--bege); outline: none; }
 
-.booking-form { display: flex; flex-direction: column; gap: 20px; }
-.form-row { display: flex; gap: 20px; }
-.form-row input, .form-row select {
-    flex: 1;
-    padding: 15px;
-    border: 1px solid #e8e2d6;
-    outline: none;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.full-width { width: 100%; cursor: pointer; border: none; }
-
-/* --- WhatsApp Float --- */
-.whatsapp-float {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: #25d366;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-.whatsapp-float img { width: 35px; }
-
-.whatsapp-float .tooltip {
-    position: absolute;
-    right: 70px;
-    background: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 12px;
-    white-space: nowrap;
-    opacity: 0;
-    transition: 0.3s;
-    pointer-events: none;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.whatsapp-float:hover .tooltip { opacity: 1; }
-
-@media (max-width: 768px) {
-    .form-row { flex-direction: column; }
-    .hero h1 { font-size: 3rem; }
-}
+/* Botões */
+.btn-primary { background: var(--gold); color: #fff; padding: 12px 25px; text-decoration: none; display: inline-block; border: none; font-weight: bold; }
+.whatsapp-float { position: fixed; bottom: 20px; right: 20px; width: 60px; z-index: 100; }
+.whatsapp-float img { width: 100%; }
