@@ -1,88 +1,62 @@
-
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ponto do Charme</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socila | Experiência de Beleza Premium</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-  <h1>Ponto do Charme</h1>
-  <nav>
-    <a href="#servicos">Serviços</a>
-    <a href="#galeria">Galeria</a>
-    <a href="#agendamento">Agendar</a>
-  </nav>
-</header>
+    <header id="header">
+        <nav class="container">
+            <div class="logo">SOCILA</div>
+            <ul class="nav-links">
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#unidades">Unidades</a></li>
+                <li><a href="#franquia">Seja um franqueado</a></li>
+            </ul>
+            <a href="#" class="btn-primary">Agendar Agora</a>
+        </nav>
+    </header>
 
-<section class="hero">
-  <div>
-    <h2>Realce sua beleza</h2>
-    <p>Cabelos, unhas e maquiagem com qualidade</p>
-    <a href="#agendamento" class="btn">Agendar horário</a>
-  </div>
-</section>
+    <section class="hero">
+        <div class="hero-content container">
+            <span class="reveal">Sua melhor versão começa aqui</span>
+            <h1>Beleza que inspira, <br><span>cuidado que transforma.</span></h1>
+            <p>O maior conceito de beleza e estética do Brasil, agora focado na sua experiência exclusiva.</p>
+            <div class="cta-group">
+                <a href="#servicos" class="btn-outline">Ver Serviços</a>
+                <a href="#" class="btn-primary">Encontrar Unidade</a>
+            </div>
+        </div>
+    </section>
 
-<section id="servicos">
-  <h2>Serviços</h2>
+    <section id="servicos" class="services container">
+        <div class="section-title">
+            <h2>Nossos Especialistas</h2>
+            <p>Serviços personalizados com padrão internacional de qualidade.</p>
+        </div>
+        <div class="grid-services">
+            <div class="service-card" data-tilt>
+                <div class="icon">✂️</div>
+                <h3>Cabelo & Cor</h3>
+                <p>Cortes modernos e técnicas de coloração que respeitam a saúde dos fios.</p>
+            </div>
+            <div class="service-card" data-tilt>
+                <div class="icon">💅</div>
+                <h3>Manicure & Pedicure</h3>
+                <p>Esmaltação premium e cuidados profundos para mãos e pés.</p>
+            </div>
+            <div class="service-card" data-tilt>
+                <div class="icon">✨</div>
+                <h3>Estética Facial</h3>
+                <p>Protocolos exclusivos para realçar sua luminosidade natural.</p>
+            </div>
+        </div>
+    </section>
 
-  <div class="cards">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9">
-      <h3>Cabelos</h3>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371">
-      <h3>Unhas</h3>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796">
-      <h3>Maquiagem</h3>
-    </div>
-  </div>
-</section>
-
-<section id="galeria">
-  <h2>Nosso Espaço</h2>
-  <div class="galeria">
-    <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f">
-    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1">
-    <img src="https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3">
-  </div>
-</section>
-
-<section id="agendamento">
-  <h2>Agende seu horário</h2>
-
-  <form id="form">
-    <input type="text" id="nome" placeholder="Seu nome" required>
-
-    <select id="servico">
-      <option value="">Serviço</option>
-      <option>Cabelos</option>
-      <option>Unhas</option>
-      <option>Maquiagem</option>
-    </select>
-
-    <input type="date" id="data">
-
-    <select id="hora">
-      <option>Escolha um horário</option>
-    </select>
-
-    <button type="submit">Agendar via WhatsApp</button>
-  </form>
-</section>
-
-<footer>
-  <p>© 2026 Ponto do Charme</p>
-</footer>
-
-<script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
