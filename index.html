@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cantinho do Luxo | Experiência de Beleza Premium</title>
+    <title>Cantinho do Luxo | Premium Beauty</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <a href="https://wa.me/5500999999999?text=Olá! Gostaria de agendar um momento de luxo." class="whatsapp-float" target="_blank">
-        <span class="tooltip">Agendar via WhatsApp</span>
+    <a href="https://wa.me/5500999999999" class="whatsapp-float" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp">
     </a>
 
@@ -20,87 +19,52 @@
             <ul class="nav-links">
                 <li><a href="#services">Serviços</a></li>
                 <li><a href="#booking">Agendamento</a></li>
-                <li><a href="#contact">Contato</a></li>
             </ul>
-            <a href="#booking" class="btn-primary">Reservar Agora</a>
+            <a href="#booking" class="btn-primary">Reservar</a>
         </nav>
     </header>
 
     <section class="hero">
         <div class="hero-content container">
-            <span class="reveal">Exclusividade em cada detalhe</span>
             <h1>Onde a Elegância <br><span>Encontra a Perfeição.</span></h1>
-            <p>Sinta um novo padrão de beleza. Um santuário desenhado para quem aprecia as coisas finas da vida.</p>
-            <div class="cta-group">
-                <a href="#services" class="btn-outline">Ver Menu</a>
-                <a href="#booking" class="btn-primary">Concierge Privado</a>
-            </div>
+            <p>Um novo padrão de beleza para quem aprecia o exclusivo.</p>
+            <a href="#booking" class="btn-primary">Concierge Privado</a>
         </div>
     </section>
 
     <section id="services" class="services container">
-        <div class="section-title">
-            <h2>Nossos Serviços</h2>
-            <p>Tratamentos personalizados para um brilho sofisticado.</p>
-        </div>
-        
         <div class="grid-services">
             <div class="service-card">
-                <div class="img-container">
-                    <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?q=80&w=800&auto=format&fit=crop" alt="Haute Coiffure">
-                </div>
+                <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?q=80&w=400" alt="Cabelo">
                 <h3>HAIR STYLING</h3>
-                <p>Cortes magistrais e coloração sob medida para realçar seus traços naturais com o padrão Haute Coiffure.</p>
+                <p>Cortes e cores sob medida.</p>
             </div>
-
             <div class="service-card">
-                <div class="img-container">
-                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=800&auto=format&fit=crop" alt="Nail Artistry">
-                </div>
+                <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=400" alt="Unhas">
                 <h3>NAIL ARTISTRY</h3>
-                <p>Manicure de alta gama e rituais de spa para mãos e pés com acabamentos premium e durabilidade.</p>
+                <p>O toque final de sofisticação.</p>
             </div>
-
             <div class="service-card">
-                <div class="img-container">
-                    <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=800&auto=format&fit=crop" alt="Makeup Art">
-                </div>
+                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=400" alt="Make">
                 <h3>MAKEUP ART</h3>
-                <p>Maquiagem profissional para eventos ou dia a dia, utilizando as linhas mais luxuosas do mundo.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="img-container">
-                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=800&auto=format&fit=crop" alt="Aesthetic Rituals">
-                </div>
-                <h3>AESTHETIC RITUALS</h3>
-                <p>Protocolos faciais avançados e rituais de pele que devolvem a luminosidade e juventude.</p>
+                <p>Realce sua beleza natural.</p>
             </div>
         </div>
     </section>
 
     <section id="booking" class="booking-section container">
         <div class="booking-card">
-            <div class="booking-text">
-                <h2>Agende seu Horário</h2>
-                <p>Preencha os dados abaixo e nossa equipe entrará em contato para confirmar sua experiência.</p>
-            </div>
+            <h2>Agende seu Horário</h2>
             <form class="booking-form">
-                <div class="form-row">
-                    <input type="text" placeholder="Nome Completo" required>
-                    <input type="tel" placeholder="Seu WhatsApp" required>
-                </div>
-                <div class="form-row">
-                    <select required>
-                        <option value="" disabled selected>Selecione o Serviço</option>
-                        <option value="cabelo">Hair Styling</option>
-                        <option value="unhas">Nail Artistry</option>
-                        <option value="make">Makeup Art</option>
-                        <option value="pele">Aesthetic Rituals</option>
-                    </select>
-                    <input type="date" required>
-                </div>
-                <button type="submit" class="btn-primary full-width">Solicitar Reserva</button>
+                <input type="text" placeholder="Nome">
+                <input type="tel" placeholder="WhatsApp">
+                <select>
+                    <option>Selecione o Serviço</option>
+                    <option>Hair Styling</option>
+                    <option>Nail Artistry</option>
+                    <option>Makeup Art</option>
+                </select>
+                <button type="submit" class="btn-primary">Solicitar Reserva</button>
             </form>
         </div>
     </section>
